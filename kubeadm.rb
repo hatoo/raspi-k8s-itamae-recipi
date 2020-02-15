@@ -9,8 +9,7 @@ service "dphys-swapfile.service" do
 end
 
 ["iptables", "arptables", "ebtables"].each do |package_name|
-  package package_name do
-  end
+  package package_name
 end
 
 [
