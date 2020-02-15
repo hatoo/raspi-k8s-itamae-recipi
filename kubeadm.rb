@@ -5,7 +5,7 @@ execute "install docker" do
 end
 
 service "dphys-swapfile.service" do
-  action :disable
+  action [:stop, :disable]
 end
 
 ["iptables", "arptables", "ebtables"].each do |package_name|
