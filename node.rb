@@ -1,5 +1,3 @@
-include_recipe "./kubeadm.rb"
-
 execute "hostnamectl set-hostname #{node["hostname"]}" do
   not_if "test $(hostname) = #{node["hostname"]}"
 end
@@ -14,3 +12,5 @@ execute "Add my host to /etc/hosts" do
   user "root"
   command "echo 127.0.1.1 #{node["hostname"]} >> /etc/hosts"
 end
+
+include_recipe "./kubeadm.rb"
