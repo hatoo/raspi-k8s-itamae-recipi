@@ -4,6 +4,10 @@
 
 - Raspberry pi 4B
 
+## OS
+
+- Raspbian Buster Lite
+
 ## How to use
 
 1. `$ bundle install --path vendor/bundle`
